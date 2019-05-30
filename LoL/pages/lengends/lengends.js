@@ -1,0 +1,26 @@
+page({
+    data:{
+        legends:[
+            {
+                name:'阿卡丽',
+                title:'刺客',
+                src:''
+            },
+            {
+                name:'亚索',
+                title:'风男',
+                src:''
+            },
+            {
+                name:'火男',
+                title:'法师',
+                src:''
+            },
+            {
+                name:'寒冰',
+                title:'ADC',
+                src:''
+            }
+        ]
+    }
+})
