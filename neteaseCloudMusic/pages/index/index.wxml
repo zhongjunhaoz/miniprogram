@@ -1,0 +1,11 @@
+<!-- index.wxml -->
+<view class="container">
+  <block wx:for="{{songLists}}" wx:key="{{index}}">
+    <view class="item" data-id="{{item.id}}" bindtap="handlePlayAudio">
+      <view class="index">{{ index + 1 }}</view>
+      <view class="rightView">
+        <view class="song-title">{{item.name}}</view>
+      </view>
+    </view>
+  </block>
+</view>
