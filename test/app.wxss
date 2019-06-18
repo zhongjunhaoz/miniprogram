@@ -1,0 +1,22 @@
+/**app.wxss**/
+@import "weui.wxss";
+input{
+  border: 1px solid blue;
+  width: 80%;
+  /* border-radius: 5%; */
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 10%;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+button{
+  width:85%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+}
