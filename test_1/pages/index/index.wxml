@@ -1,0 +1,21 @@
+<scroll-view scroll-x="true" class="weui-navbar">
+  <!-- <block wx:for-items="{{tabs}}">
+  <view id="{{index}}" class="{{activeIndex == index ?'item_on':''}} default-item" bindtap="tabClick" style="width:{{tabW}}px">
+  {{item}}
+  </view>
+ </block> -->
+ <view class="weui-navbar-slider" style="transform:translateX({{slideOffset}}px);"></view>
+</scroll-view>
+
+
+<swiper current="{{activeIndex}}" class="swiper-box" duration="100" bindchange="bindChange">
+
+ <swiper-item class="swiper-item">
+  <view class="slide-view">tab0</view>
+ </swiper-item>
+
+  <swiper-item class="swiper-item">
+  <view class="slide-view">tab1</view>
+ </swiper-item>
+
+</swiper>
