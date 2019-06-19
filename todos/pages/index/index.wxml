@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button size="mini" wx:if="{{!hasUserInfo && canIUse}}" 
+    open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="titleBar">
+    <view class="add">
+      <button class="mini-btn" type="warn" size="mini" bindtap="addTodoShow">+添加</button>
+    </view>
+  </view>
+  <!-- 两种状态 有列表 没数据 -->
+  <block wx:if="{{!todos.length}}">
+    <view class="nodata">暂无数据</view>
+  </block>
+  <view class="item" wx:for="{{todos}}" wx:key="index">
+    <view class="content">
+      <text class="title">{{item.title}}</text>
+    </view>
+    <text class="time">{{item.id}}</text>
+  </view>
+  <!-- <view class="addForm" wx:if="{{addShow}}"> -->
+  <view class="addForm {{addShow? '' : 'hide'}}">
+    <view class="addForm-div">
+      <input type="text" class="weui-input" placeholder="请输入todo" value="{{addText}}" 
+        bindinput="addInput" />
+      <view class="addForm-btn">
+        <button class="weui-btn mini-btn" size="mini" type="warn" bindtap="addTodo">确定</button>
+        <button class="weui-btn mini-btn" size="mini" type="default" bindtap="addTodoHide">取消</button>
+      </view>
+    </view>
+  </view>
+</view>
