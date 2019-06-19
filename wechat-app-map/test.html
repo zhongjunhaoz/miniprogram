@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var performanceS =function()  {
+}
+var performanceA = function(){
+}
+performanceS.prototype.calculate = function(salary){
+  return salary * 5;
+}
+
+performanceA.prototype.calculate = function(salary)  {
+  return salary * 3;
+}
+
+var Bounce = function(salary){
+  this.salary = salary;
+}
+Bounce.prototype.setStrategy = (strategy) =>  {
+  console.log('1', this);
+  this.strategy = strategy;
+}
+Bounce.prototype.getBounce = function() {
+  console.log('2', this);
+  return this.strategy.calculate(this.salary);
+}
+
+var bounce = new Bounce(10000);
+bounce.setStrategy(new performanceS());
+console.log(bounce.getBounce());
+
+
+    </script>
+</body>
+</html>
